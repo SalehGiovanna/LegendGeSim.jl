@@ -22,8 +22,7 @@ function pet_to_stp(pet_table::Table, detector_SSD::SolidStateDetector{T}) where
     # Save only events that occur in the detector PV
     # volID = 1 selects only events in the detector
     if hasproperty(pet_table, :volID)
-        @info "TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST"
-        @info "TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST"
+        
         @info "...checking volID"
         pet_pv = group_by_column(pet_table, :volID)[1]
 
@@ -84,6 +83,8 @@ end
 function pet_to_stp(detector_metadata::PropDict, pet_filename::AbstractString)
 
     @info "---------------------- pet -> stp (stepping info)"
+    @info "TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST"
+    
 
     # SSD detector for geometry purposes (not simulation)
     # detector_SSD = LEGEND_SolidStateDetector(Float32, detector_metadata, Environment())
