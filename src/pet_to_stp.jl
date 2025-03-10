@@ -22,6 +22,8 @@ function pet_to_stp(pet_table::Table, detector_SSD::SolidStateDetector{T}) where
     # Save only events that occur in the detector PV
     # volID = 1 selects only events in the detector
     if hasproperty(pet_table, :volID)
+        @info "TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST"
+        @info "TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST"
         @info "...checking volID"
         pet_pv = group_by_column(pet_table, :volID)[1]
 
